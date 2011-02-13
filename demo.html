@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!--*-->
+<html>
+<title>Cool html demo</title>
+<head>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<!-- from http://code.google.com/p/html5shiv/ -->
+<!--[if lt IE 9]>
+<script -->
+<!-- Let Google host jQuery, with a local fallback -->
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script>!window.jQuery && document.write('<script src="js/jquery-1.5.2.min.js"><\/script>')</script>
+<![endif]-->
+
+<script src="js/driver.js"></script>
+<script src="js/storage.js"></script>
+<script> <!--*-->
+$(document).ready(function(){
+   startAll();
+});
+</script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="window">
+<div id="mask">
+<section class="page" name="1" id="top">
+<header>
+<h1>HTML5 DEMO</h1>
+</header>
+</section>
+<!-- end of section -->
+
+<section class="page" name="" id="geolocation">
+<header>
+<h1>Geolocation</h1>
+</header>
+Crazy usage of geolocation from: slides.html5rocks.com
+<script src="js/geo.js">
+</section>
+<!-- end of section -->
+<section class="page" name="" id="localStorage">
+<header>
+<h1>LocalStrage</h1>
+</header>
+<article>
+Your browser can save up to 5mg of your data in key/value
+pairs. (Note that everything will be stored as a string and it can
+build up)
+</article>
+</section>
+<!-- end of section -->
+<section class="page" name="" id="localStorage">
+<header>
+<h1>LocalStrage</h1>
+</header>
+<article>
+Your browser can save up to 5mg of your data in key/value
+pairs. (Note that everything will be stored as a string and it can
+build up)
+</article>
+</section>
+<!-- end of section -->
+<footer>
+Copyright Angjoo Kanazawa
+<time datetime="2011-02-13">February 2011</time>
+</footer>
+</div><!--end of mask-->
+</div> <!--end of window-->
+</body>
+</html>

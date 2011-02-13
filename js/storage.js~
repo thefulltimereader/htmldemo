@@ -1,0 +1,7 @@
+function supports_html5_storage(){
+try{
+
+return 
+}
+	
+}
