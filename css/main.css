@@ -1,60 +1,81 @@
 body{
-      font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Monaco, Lucida Console, monospace;
+      font-family:verdana,"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Monaco, Lucida Console, monospace;
       width:100%;
       height:100%;
+      font-size:0.7em;
 }
+a:active, a:link, a:visited{color:black;}
 
 #window{ 
    position:fixed;
-   width:1024px;
+   width:100%;
    height:100%;
    top:0;
    left:0;
    background-color:#fff;
    overflow:hidden;
  }
- 
+
 footer{
-	position:abolute:
+	position:fixed:
 	bottom:0;
 	right:0;
 	font-size:0.8em;
 	color:white;
+	width:100%;
 }
 nav{
 	position:fixed;
 	background-color:white;
-	height:210px;
+	height:220px;
 	width:100%;
 	top:0;
 	left:0;
+	padding:4px;
 }
+h2{
+	text-align: center;
+	margin: 5px;
+}
+
 /***For each page***/
 section{ 
-  width: 25%; // 100/|page|
+  width: 100%;
   height:100%;
-  padding-top:220px;//equal to height of nav +10
+  padding-top:230px;//equal to height of nav +10
   z-index:-1;//just in case
 }
 section[name^="1"]{
-  background-color: black;
+  background-color: #2F3030;
 }
 section[name^="2"]{
-  background-color: blue;
+  background-color: #15CAB1;
 }
 section[name^="3"]{
-  background-color: red;
+  background-color: #0A633D;
 }
-section[name^="4"]{
-  background-color: white;
+section[id^="ajax"]{
+  background-color: #BBFF85;
 }
-/**css3 selector, $= -> section elements whos id ends in 1
+/** for the main page
+css3 selector, $= -> section elements whos id ends in 1
 ^= start with x
 *= contains x **/
 section[name^="1"] h1{
+ color: white; font: bold 5em Helvetica, Arial, Sans-Serif;
+           text-shadow: 1px 1px #FC455B, 2px 2px #FC455B, 3px 3px #FC455B;
+           -webkit-transition: all 0.12s ease-out;
+           -moz-transition: all 0.12s ease-out;
+           -o-transition: all 0.12s ease-out;
+}
+section[name^="1"] h1:hover {
+           position: relative; top: -3px; left: -3px; 
+           text-shadow: 1px 1px #FC455B, 2px 2px #FC455B, 3px 3px #FC455B, 4px 4px #FC455B, 5px 5px #FC455B, 6px 6px #FC455B;
+        }
+/**shiny effect
   text-align: center;
   color: white;
-  font-size: 4em;
+  font-size: 5em;
   
  background: -moz-linear-gradient(left, #525252, 0.4, #525252, 0.5, white, 0.6, #525252, #525252);
   background: -webkit-gradient(linear,left top,right top,color-stop(0, #525252),color-stop(0.4, #525252),color-stop(0.5, white),color-stop(0.6, #525252),color-stop(1, #525252));  
@@ -65,7 +86,8 @@ section[name^="1"] h1{
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   
-  -webkit-animation: htmlcss3demo 7s infinite;
+  -webkit-animation: htmlcss3demo 10s infinite ease-out;
+
 
   font-weight: 800;
   
@@ -73,6 +95,7 @@ section[name^="1"] h1{
   width: 100%;
   
   -webkit-text-size-adjust: none;
+  */
 }
 
 @-webkit-keyframes htmlcss3demo {
@@ -86,17 +109,30 @@ section[name^="1"] h1{
 
 section[name^="1"] header{
   margin:auto;
+  margin-top:5px;
   display:block;
-  width:650px;
+  text-align: center;
+}
+/**** for gallery ****/
+#gallery{
+text-align: center;
 }
 
-/*utilities cross-browser compatible thanks to css3please.com */
-.box_round{
+#gallery ul li{
+	display: inline;
+	margin-right:5px;
+}
+#gallery ul li a:hover
+{
+font-weight: bold;
+}
 
-  moz-border-radius: 12px;
-  border-radius:12px;
-  ebkit-border-radius:12px;
- /* border:2px solid #353535;*/
+/*utilities cross-browser compatible from css3please.com */
+.box_round{
+  moz-border-radius: 11px;
+  border-radius:11px;
+  ebkit-border-radius:11px;
+  border:2px solid white;
 }
 
 

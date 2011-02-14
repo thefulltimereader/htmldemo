@@ -1,6 +1,6 @@
 <!DOCTYPE html> <!--*-->
 <html>
-<title>HTML Demo</title>
+<title>Ajax reddit photo gallery example</title>
 <head>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
@@ -11,55 +11,24 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script>!window.jQuery && document.write('<script src="js/jquery-1.5.2.min.js"><\/script>')</script>
 <![endif]-->
-<script src="js/jquery.scrollTo-min.js"></script>
 <script src="js/colorbox/jquery.colorbox-min.js"></script>
-<script src="js/storage.js"></script>
-<script src="js/scrolling.js"></script>
-<script src="js/driver.js"></script>
 <script> <!--*-->
 $(document).ready(function(){
-   startAll();
-   $("a[name='reddit']").colorbox({transition:"fade", maxWidth:"700px", maxHeight:"700px",});
+  $("a[name='reddit']").colorbox({transition:"fade", maxWidth:"700px", maxHeight:"700px"});
 });
 </script>
+<link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/colorbox.css">
-<link rel="stylesheet" href="css/reset.css"><!--*-->
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div id="window">
 <nav>
-navigate with arrow keys
+photo gallery from reddit pics json top x
 </nav>
-<section name="1" id="top">
+<section name="" id="ajax">
 <header>
-<h1>HTML/CSS3 DEMO</h1>
-</header>
-</section>
-<!-- end of section -->
-<!-- end of section -->
-<section  name="2" id="localStorage">
-<header>
-<h1>LocalStrage</h1>
-</header>
-<article>
-Your browser can save up to 5mg of your data in key/value
-pairs. (Note that everything will be stored as a string and it can
-build up)
-</article>
-</section>
-<!-- end of section -->
-<section  name="3" id="geolocation">
-<header>
-<h1>Geolocation</h1>
-</header>
-Crazy usage of geolocation from: slides.html5rocks.com
-<script src="js/geo.js"></script>
-</section>
-<section name="4" id="ajax">
-<header>
-<h1>photo gallery from reddit pics json top x</h1>
-<h2><br/>Ajax photo gallery</h2>
+<h2>Ajax photo gallery</h2>
 </header>
 <div id="gallery">
 <ul>
@@ -71,8 +40,9 @@ Crazy usage of geolocation from: slides.html5rocks.com
 </div>
 </section>
 <!-- end of section -->
+
 <footer>
-By Angjoo Kanazawa
+Copyright Angjoo Kanazawa
 <time datetime="2011-02-13">February 2011</time>
 </footer>
 

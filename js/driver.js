@@ -19,6 +19,7 @@ function resizePanel(){
   mask_width = width * $('section').length;
 //  alert("resize to:" + width + " h: " + height);
   $('#window, section').css({width: width, height:height}); 
+
   //$('#mask').css({width:mask_width, height:height});
   
 //  $('#window').scrollTo($('section.selected').attr('href'), 0);
