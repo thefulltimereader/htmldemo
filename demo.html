@@ -1,6 +1,6 @@
 <!DOCTYPE html> <!--*-->
 <html>
-<title>Cool html demo</title>
+<title>HTML Demo</title>
 <head>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
@@ -11,9 +11,11 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script>!window.jQuery && document.write('<script src="js/jquery-1.5.2.min.js"><\/script>')</script>
 <![endif]-->
-
-<script src="js/driver.js"></script>
+<script src="js/jquery.scrollTo-min.js"></script>
+<script src="js/jquery.serialScroll-1.2.2-min.js"></script>
 <script src="js/storage.js"></script>
+<script src="js/scrolling.js"></script>
+<script src="js/driver.js"></script>
 <script> <!--*-->
 $(document).ready(function(){
    startAll();
@@ -24,23 +26,17 @@ $(document).ready(function(){
 </head>
 <body>
 <div id="window">
-<div id="mask">
+<nav>
+
+</nav>
 <section class="page" name="1" id="top">
 <header>
-<h1>HTML5 DEMO</h1>
+<h1  class="box_round">HTML/CSS3 DEMO</h1>
 </header>
 </section>
 <!-- end of section -->
-
-<section class="page" name="" id="geolocation">
-<header>
-<h1>Geolocation</h1>
-</header>
-Crazy usage of geolocation from: slides.html5rocks.com
-<script src="js/geo.js">
-</section>
 <!-- end of section -->
-<section class="page" name="" id="localStorage">
+<section class="page" name="2" id="localStorage">
 <header>
 <h1>LocalStrage</h1>
 </header>
@@ -51,14 +47,20 @@ build up)
 </article>
 </section>
 <!-- end of section -->
-<section class="page" name="" id="localStorage">
+<section class="page" name="3" id="geolocation">
 <header>
-<h1>LocalStrage</h1>
+<h1>Geolocation</h1>
+</header>
+Crazy usage of geolocation from: slides.html5rocks.com
+<script src="js/geo.js"></script>
+</section>
+<!-- end of section -->
+<section class="page" name="4" id="what">
+<header>
+<h1>Basic Stuff</h1>
 </header>
 <article>
-Your browser can save up to 5mg of your data in key/value
-pairs. (Note that everything will be stored as a string and it can
-build up)
+
 </article>
 </section>
 <!-- end of section -->
@@ -66,7 +68,7 @@ build up)
 Copyright Angjoo Kanazawa
 <time datetime="2011-02-13">February 2011</time>
 </footer>
-</div><!--end of mask-->
+
 </div> <!--end of window-->
 </body>
 </html>

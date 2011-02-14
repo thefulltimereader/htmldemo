@@ -1,7 +1,13 @@
+maxPage = 4;
 function startAll(){
+currentPage = 1;
 resume();
-scrolling();
-$(window).resize(function){
+resizePanel()
+
+geostart();
+
+
+$(window).resize(function(){
 resizePanel();
 });
 }
@@ -11,9 +17,9 @@ function resizePanel(){
   height = $(window).height();
   
   mask_width = width * $('section').length;
-  
-  $('#window, section').css({width: width, height:height});
-  $('#mask').css({width:mask_width, height:height});
+//  alert("resize to:" + width + " h: " + height);
+  $('#window, section').css({width: width, height:height}); 
+  //$('#mask').css({width:mask_width, height:height});
   
 //  $('#window').scrollTo($('section.selected').attr('href'), 0);
 			      
