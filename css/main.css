@@ -57,11 +57,26 @@ section[name^="3"]{
 section[id^="ajax"]{
   background-color: #BBFF85;
 }
+section[name^="2"] h1{ 
+  font-size:3em;
+   color: transparent;
+ text-shadow: #FFFFFF 0 0 8px; //blurry
+ }
+section[name^="3"] h1{ 
+  font-size:3em;
+   color: white;
+ text-shadow: 1px 1px #FFFFFF, 3px 3px #000000, 3px 3px #FFFFFF;
+ }
+section[name^="4"] h1{ 
+  font-size:3em;
+   color: #BBFF85;
+ text-shadow: 1px 1px #FFFFFF, 2px 2px #FFFFFF, 3px 3px #FFFFFF; 
+ }
 /** for the main page
 css3 selector, $= -> section elements whos id ends in 1
 ^= start with x
 *= contains x **/
-section[name^="1"] h1{
+section h1{
  color: white; font: bold 5em Helvetica, Arial, Sans-Serif;
            text-shadow: 1px 1px #FC455B, 2px 2px #FC455B, 3px 3px #FC455B;
            -webkit-transition: all 0.12s ease-out;
@@ -106,7 +121,7 @@ section[name^="1"] h1:hover {
         background-position: 720px 0;
     }
 }
-
+ 
 section[name^="1"] header{
   margin:auto;
   margin-top:5px;
@@ -116,16 +131,26 @@ section[name^="1"] header{
 /**** for gallery ****/
 #gallery{
 text-align: center;
+font-size: 1em;
 }
+#gallery h2{ 
+  font-weight:bold;
+  font-size: 1.1em;
+ }
 
 #gallery ul li{
-	display: inline;
-	margin-right:5px;
+/** //if you want it to align horizontally
+display: inline;
+	margin-right:5px;**/
+margin-bottom:8px;
 }
 #gallery ul li a:hover
 {
 font-weight: bold;
 }
+#gallery ul li a{ 
+     text-decoration:none;
+ }
 
 /*utilities cross-browser compatible from css3please.com */
 .box_round{
