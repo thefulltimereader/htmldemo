@@ -18,9 +18,9 @@ a:active, a:link, a:visited{color:black;}
 
 footer{
 	position:fixed:
-	bottom:0;
-	right:0;
-	font-size:0.8em;
+	bottom:15px;
+	right:25px;
+	font-size:0.6em;
 	color:white;
 	width:100%;
 }
@@ -69,6 +69,12 @@ text-align:center;
 margin-top:30px;
 
  }
+section[id*="canvas"] article{
+	height:400px;
+	width:600px;
+	margin:auto;
+
+}
 section[id*="geo"]{
 	color: white;
 }
@@ -155,7 +161,7 @@ display: inline;
 	margin-right:5px;**/
 margin-bottom:8px;
 margin-top:8px;
-font-size:1.1em;
+
 }
 #gallery ul li a:hover
 {
@@ -170,7 +176,7 @@ font-size:1.1em;
   moz-border-radius: 11px;
   border-radius:11px;
   ebkit-border-radius:11px;
-  border:2px solid white;
+  border:2px solid black;
 }
 .box_rotate:hover {
      -moz-transform: rotate(3.5deg);  /* FF3.5+ */

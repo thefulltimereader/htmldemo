@@ -6,7 +6,7 @@ resizePanel()
 
 geostart();
 
-draw();
+
 $(window).resize(function(){
 		   resizePanel();
 		 });
