@@ -27,6 +27,5 @@ function updateCurrent(dir){
 function setPage(page){
   currentPage = page;
   curr = 'section[name^='+page+']';
-  console.log(curr);
    $('#window').scrollTo('section[name^='+page+']', 800);
 }

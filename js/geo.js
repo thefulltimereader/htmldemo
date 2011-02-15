@@ -1,14 +1,26 @@
 function geostart(){
 if(navigator.geolocation){
 	navigator.geolocation.getCurrentPosition(drawMap);
+  console.log("ask?");
 }
 }
 
 
 function drawMap(position){
-//alert("Your location is: " + position.coords.longitude+ ", "  + position.coords.latitude);
-var latlan = new google.maps.LatLng(
-			 position.coords.latitude, position.coords.longitude);
-	 var marker = new google.maps.Marker({position:latlan, map:map});
-	map.setCenter(latlan);
+var lat =  position.coords.latitude;
+var lng = position.coords.longitude;
+  console.log("ask?");
+console.log("Your location is: " + lat+ ", "  + lng);
+
+var latlang = new google.maps.LatLng(lat, lng);
+
+var options={
+  zoom: 8,
+  center:latlng,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+
+var map = new google.maps.Map($('#map_canvas'), options);
+
 }

@@ -6,7 +6,6 @@ function resume(){
 	if (!supports_html5_storage()) return false;
 	updateVisited();
 	lastPage =localStorage.getItem("lastPage");
-	console.log(lastPage);
 	if(lastPage ==null) lastPage = 1;
 	else  lastPage = parseInt(lastPage);
         
@@ -32,8 +31,8 @@ function updateVisited(){
 	 visited = (localStorage.getItem("visited"));
 	 if(visited!=null){
 		 visited = parseInt(visited);
-	         $("section[id=\'localStorage\'] h2").html("This is your " + visited+" visit.");
 		 localStorage.setItem("visited", ++visited);
+	         $("section[id=\'localStorage\'] h2").html("You visited me " + visited+" times!");
 	         console.log("visited updated to: " + visited);
 	 }
 	 else{

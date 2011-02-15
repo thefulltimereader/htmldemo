@@ -37,6 +37,7 @@ h2{
 	text-align: center;
 	margin: 5px;
 }
+
 /***For each page***/
 section{ 
   width: 100%;
@@ -56,31 +57,20 @@ section[name^="3"]{
 section[id^="ajax"]{
   background-color: #BBFF85;
 }
-section[id*="local"] h1{ 
-  font-size:4em;
-   color: transparent;
- text-shadow: #FFFFFF 0 0 6px; //blurry
- }
-section[id*="local"] h2{ 
-  font-size:2em;
-   color: white;
-font-weight:bold;
-text-align:center;
-margin-top:30px;
-
- }
-section[id*="geo"]{
-	color: white;
-}
-section[id*="geo"] h1{ 
-  font-size:4em;
-   color: white;
- text-shadow: 1px 1px #000000, 2px 2px #FFFFFF, 4px 4px #000000;
- }
-section[id="ajax"] h1{ 
+section[name^="2"] h1{ 
   font-size:3em;
-   color: #ffffff;
- text-shadow: 1px 1px #0A633D, 2px 2px #0A633D, 3px 3px #0A633D; 
+   color: transparent;
+ text-shadow: #FFFFFF 0 0 8px; //blurry
+ }
+section[name^="3"] h1{ 
+  font-size:3em;
+   color: white;
+ text-shadow: 1px 1px #000000, 3px 3px #FFFFFF, 4px 4px #000000;
+ }
+section[name^="4"] h1{ 
+  font-size:3em;
+   color: #BBFF85;
+ text-shadow: 1px 1px #FFFFFF, 2px 2px #FFFFFF, 3px 3px #FFFFFF; 
  }
 /** for the main page
 css3 selector, $= -> section elements whos id ends in 1
@@ -145,8 +135,7 @@ font-size: 1em;
 }
 #gallery h2{ 
   font-weight:bold;
-  font-size: 1.2em;
-  margin: 10px;
+  font-size: 1.1em;
  }
 
 #gallery ul li{
@@ -154,12 +143,10 @@ font-size: 1em;
 display: inline;
 	margin-right:5px;**/
 margin-bottom:8px;
-margin-top:8px;
-font-size:1.1em;
 }
 #gallery ul li a:hover
 {
-  text-shadow:1px 2px 5px #888;
+font-weight: bold;
 }
 #gallery ul li a{ 
      text-decoration:none;
@@ -172,12 +159,18 @@ font-size:1.1em;
   ebkit-border-radius:11px;
   border:2px solid white;
 }
-.box_rotate:hover {
-     -moz-transform: rotate(3.5deg);  /* FF3.5+ */
-       -o-transform: rotate(3.5deg);  /* Opera 10.5 */
-  -webkit-transform: rotate(3.5deg);  /* Saf3.1+, Chrome */
-      -ms-transform: rotate(3.5deg);  /* IE9 */
-          transform: rotate(3.5deg);  
+
+
+.box_textshadow{
+  text-shadow:1px 1px 3px #888;
+}
+
+.box_rotate {
+     -moz-transform: rotate(7.5deg);  /* FF3.5+ */
+       -o-transform: rotate(7.5deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(7.5deg);  /* Saf3.1+, Chrome */
+      -ms-transform: rotate(7.5deg);  /* IE9 */
+          transform: rotate(7.5deg);  
              filter:
 	     progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', /* IE6ÐIE9 */ 
                      M11=0.9914448613738104,
