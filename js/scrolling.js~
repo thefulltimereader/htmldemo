@@ -1,5 +1,4 @@
 maxPage = 4;
-currentPage = 1;
 $(document.documentElement).keyup(function(event){
 	switch(event.keyCode){
 		case 40: //down
@@ -23,10 +22,9 @@ function updateCurrent(dir){
         saveLocation(currentPage);
 	   return 'section[name^='+currentPage+']';
 }
-//jumps to the specified page, only called in the beginning
+//jumps to the specified page
 function setPage(page){
   currentPage = page;
-  curr = 'section[name^='+page+']';
-  console.log(curr);
-   $('#window').scrollTo('section[name^='+page+']', 800);
+  $('section[name^='+page+']').addClass('current');
+  $('#window').scrollTo('section[name^='+page+']', 800);
 }

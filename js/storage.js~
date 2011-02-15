@@ -5,12 +5,9 @@
 function resume(){
 	if (!supports_html5_storage()) return false;
 	updateVisited();
-	lastPage =localStorage.getItem("lastPage");
-	console.log(lastPage);
+	lastPage = parseInt(localStorage.getItem("lastPage"));
 	if(lastPage ==null) lastPage = 1;
-	else  lastPage = parseInt(lastPage);
-        
-        setPage(lastPage);
+	setPage(lastPage);
 	return true;
 }
 
@@ -22,7 +19,7 @@ function supports_html5_storage(){
 	}
 }
 
-function saveLocation(page){
+function saveLocation(cpage){
 	if (!supports_html5_storage()){return false;}
 	localStorage.setItem("lastPage",page);
 	return true;
@@ -33,16 +30,16 @@ function updateVisited(){
 	 if(visited!=null){
 		 visited = parseInt(visited);
 	         $("section[id=\'localStorage\'] h2").html("This is your " + visited+" visit.");
-		 localStorage.setItem("visited", ++visited);
+		 localStorage.setItem("visited", visited++);
 	         console.log("visited updated to: " + visited);
 	 }
 	 else{
 		 localStorage.setItem("visited", 1);
-	         $('section[id=\'localStorage\'] h2').html("This is your first visit.");
+	         $(section[id="localStorage"] h2).html("This is your first visit.");
 	 }
 	} catch (e) {
 		console.log(e);		 //e==QUOTA_EXCEEDED_ERR, write to console
-		$('section[id=\'localStorage\'] h2').append("You visited me a lot.");
+		$(section[id="localStorage"] h2).append("You visited me a lot.");
 	}
 	return;
 }
