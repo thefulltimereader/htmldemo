@@ -1,4 +1,0 @@
-//fetches and decomposes json feed from reddit pics
-$.ajax(function(){
-  
-});
