@@ -11,11 +11,10 @@ $.ajax({
 /**
  * <li><a href="http://i.imgur.com/18U4t.jpg" ref="reddit" title="Regarding, 'There Are No Rules.'">Regarding, 'There Are No Rules.'</a></li>
  */
-i=0;
-alert(json.data.children[1].title);
-    $.each(json.data.children, function(i, data){
-	     title = data.title;
-	if(i==0){ alert(title);alert(this.url); alert(data.kind);i++;}
+console.log(json.data.children.toString());
+    $.each(json.data.children, function(i, json){
+	     title = json.title;
+	     console.log(json.kind.toString()+" " + json.title.toString()+ " " + json.children.toString())
 	     url = data.url;
 	     output = "<li><a href='" +url + "' ref='reddit' title='"+title+"'>"+title+"</a></li>";
 	     $('#gallery ul').append(output);

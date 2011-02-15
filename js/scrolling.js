@@ -1,3 +1,4 @@
+maxPage = 4;
 $(document.documentElement).keyup(function(event){
 	switch(event.keyCode){
 		case 40: //down
@@ -6,22 +7,24 @@ $(document.documentElement).keyup(function(event){
 		case 38: // up
 		  dir = -1;
 		break;
-/*		case 37: //left
-		  dir = -2;
-		break;
-		default: dir = 2;//right*/
 		default: dir= 0;
 	}
-	if(dir==0) return;
+	if(dir!=0){
 	curr = updateCurrent(dir);
 	$(curr).addClass('current');
 	$('#window').scrollTo(curr, 800);
+	}
 });
 //where dir={-1(up), 1(down), +2(left), -2(right)}
 function updateCurrent(dir){
 	$('section[name^='+currentPage+']').removeClass('current');
 	   (currentPage > maxPage)? currentPage = 1: (currentPage < 1)? currentPage = maxPage: currentPage = currentPage + dir;
+        saveLocation(currentPage);
 	   return 'section[name^='+currentPage+']';
 }
-function setPage(){
+//jumps to the specified page
+function setPage(page){
+  currentPage = page;
+  $('section[name^='+page+']').addClass('current');
+  $('#window').scrollTo('section[name^='+page+']', 800);
 }
