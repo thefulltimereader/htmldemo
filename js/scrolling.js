@@ -1,4 +1,4 @@
-maxPage = 4;
+maxPage = 5;
 currentPage = 1;
 $(document.documentElement).keyup(function(event){
 	switch(event.keyCode){
